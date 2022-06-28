@@ -1,0 +1,109 @@
+body {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.headerStyle {
+    background-color: #2ca9c9;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 80px 100px 100px 100px;
+    justify-content: space-between;
+    font-size: xx-large;
+}
+
+.logo {
+    height: 140px;
+}
+
+span {
+    color: white
+}
+
+.searchInput {
+    width: 168px;
+    height: 32px;
+    border-radius: 8px;
+    border: 1px solid white;
+    outline: none;
+    background-color: #2ca9c9;
+    padding-left: 20px;
+    color: white;
+}
+
+.searchForm {
+    width: 168px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+.searchIcon {
+    width: 20px;
+    position: absolute;
+    padding-right: 10px;
+}
+
+.hrStyle {
+    border: 1px solid white;
+    height: 25px;
+    margin: 0px;
+}
+
+.navBarHeader {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+p {
+    font-size: 45px;
+    margin: 0px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0px;
+    font-size: 62px;
+}
+
+.bodyStyle {
+    padding: 10px 100px 100px 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: #2ca9c9;
+    margin-top: 20px;
+}
+
+.bodyHrStyle{
+    width: 80%;
+    margin-top: 50px;
+}
+
+footer {
+    background-color: rgb(201, 192, 192);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mediaLink {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    color: white;
+    font-size: 1px;
+}
+
+.mediaIcon{
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1px;
+}
