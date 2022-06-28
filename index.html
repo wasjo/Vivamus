@@ -19,30 +19,74 @@
             <span>Egestas</span>
         </div>
         <form action="index.html" class="searchForm">
-            <input type="text" class="searchInput" name="value">
+            <input type="text" class="searchInput" name="value" value="">
             <img src="./assets/MAGNIFYING.png" alt="magnifyingIcon" class="searchIcon" />
         </form>
     </header>
+
     <body>
-        <div class="bodyStyle">
-            <h1>In euismod sapien eu maximus tempus</h1>
-            <p>
-                Vestibulum bibendum posuere dui, in pharetra est hendrerit ac.
-                Integer posuere metus lacus
-            </p>
-            <hr class="bodyHrStyle"/>
+        <div class="bodyDivStyle">
+            <section class="bodyStyle">
+                <h1>In euismod sapien eu maximus tempus</h1>
+                <p>
+                    Vestibulum bibendum posuere dui, in pharetra est hendrerit ac.
+                    Integer posuere metus lacus
+                </p>
+                <hr class="bodyHrStyle" />
+            </section>
+            <section id="progress">
+                <div id="progressBar"></div>
+                <ul id="progressNum">
+                    <li class="step active">1</li>
+                    <li class="step">2</li>
+                    <li class="step">3</li>
+                </ul>
+            </section>
+            <section class="sectionCard">
+                <h1>About You</h1>
+                <form>
+                    <div>
+                        <label for="firstName">First name*</label><br>
+                        <input type="text" id="firstName" name="firstName" value=""><br>
+                        <label for="lastName">Last name*</label><br>
+                        <input type="text" id="lastName" name="lastName" value="">
+                    </div>
+                    <label for="emailAddress">Email Address*</label><br>
+                    <input type="email" id="emailAddress" name="emailAddress" value=""><br>
+                    <label for="mobileNumber">Mobile number*</label><br>
+                    <input type="number" id="mobileNumber" name="mobileNumber" value="">
+                    <button type="submit" value="Submit"> Next </button>
+                </form>
+            </section>
         </div>
     </body>
     <footer>
-        <div>
-            <div class="mediaIcon">facebook<div>
-            <div class="mediaIcon">facebook<div>
-            <div class="mediaIcon">facebook<div>
-            <div class="mediaIcon">facebook<div>
-            <div class="mediaIcon">facebook<div>
-            <div class="mediaIcon">facebook<div>
+        <div class="mediaLinkStyle">
+            <span class="mediaIcon">facebook</span>
+            <span class="mediaIcon">facebook</span>
+            <span class="mediaIcon">facebook</span>
+            <span class="mediaIcon">facebook</span>
+            <span class="mediaIcon">facebook</span>
+        </div>
+        <div class="sponsorStyle">
+            <span>Pellentesqu</span>
+            <hr class="hrStyle" />
+            <span>Et interdum</span>
+            <hr class="hrStyle" />
+            <span>Neque</span>
+            <hr class="hrStyle" />
+            <span>Integer</span>
+            <hr class="hrStyle" />
+            <span>Ullamcorper</span>
+            <hr class="hrStyle" />
+            <span>Sagittis</span>
+        </div>
+        <div class="copyrightStyle">
+            <span>Copyright © 2015 Proin eget ipsum libero</span>
+            <span>All Rights Reserved.</span>
         </div>
     </footer>
+    <script src="./assets/javaScript.js"></script>
 </body>
 
 </html>
