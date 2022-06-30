@@ -8,7 +8,7 @@
 
 <body>
     <header class="headerStyle">
-        <img src="./assets/VIVA_LOGO.png" alt="logo" class="logo" />
+        <img src="./assets/images/VIVA_LOGO.png" alt="logo" class="logo" />
         <div class="navBarHeader">
             <span>Bibendum</span>
             <hr class="hrStyle" />
@@ -20,7 +20,7 @@
         </div>
         <form action="index.html" class="searchForm">
             <input type="text" class="searchInput" name="value" value="">
-            <img src="./assets/MAGNIFYING.png" alt="magnifyingIcon" class="searchIcon" />
+            <img src="./assets/images/MAGNIFYING.png" alt="magnifyingIcon" class="searchIcon" />
         </form>
     </header>
 
@@ -70,8 +70,8 @@
                 <section class="sectionCard">
                     <h1 id="aboutYou">Your donation</h1>
                     <div class="yourDonation">
-                        <div>
-                            <span>Paypal</span> <span>Credit Card</span>
+                        <div class="headerForCard">
+                            <span id="tab1">Paypal</span> <span id="tab2">Credit Card</span>
                         </div>
                         <label for="inputShortStyle">Donation Amount*</label>
                         <input type="number" id="inputShortStyle" name="lastName" value="">
@@ -85,30 +85,21 @@
                         <input type="number" id="inputShortStyle" name="lastName" value="">
                         <label for="inputShortStyle">Expiry Date*</label>
                         <input type="number" id="inputShortStyle" name="lastName" value="">
-                        
+
                     </div>
                 </section>
                 <section class="sectionCard">
-                    <h1 id="aboutYou">About You</h1>
+                    <h1 id="aboutYou">Your Message</h1>
                     <div class="bodyForm">
-                        <div class="firstAndLastName">
-                            <span>
-                                <label for="firstName">First name*</label>
-                                <input type="text" id="firstName" name="firstName" value="">
-                            </span>
-                            <span>
-                                <label for="lastName">Last name*</label>
-                                <input type="text" id="lastName" name="lastName" value="">
-                            </span>
-                        </div>
                         <div class="emailAndMobile">
                             <span>
-                                <label for="emailAddress">Email Address*</label>
-                                <input type="email" id="emailAddress" name="emailAddress" value="">
+                                <label for="text">Your Message</label>
+                                <textarea rows="4" cols="50" type="text" id="styleForTextArea" name="textarea"
+                                    value=""> </textarea>
                             </span>
                             <span>
-                                <label for="mobileNumber">Mobile number*</label>
-                                <input type="number" id="mobileNumber" name="mobileNumber" value="">
+                                <input type="checkbox" id="anonymous" name="anonymous" value="anonymous">
+                                <label for="anonymous"> Keep me anonymous</label><br>
                             </span>
                         </div>
                     </div>

@@ -228,6 +228,36 @@ label {
     border-radius: 8px;
 }
 
+#tab1 {
+    color: black;
+    background-color: #2ca9c9;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    color: white;
+    border-radius: 8px 8px 0px 0px ;
+}
+#tab2 {
+    color: black;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    color: #2ca9c9;
+    border-radius: 8px 8px 0px 0px ;
+}
+
+.headerForCard {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
 #inputShortStyle {
     width: 40%;
     height: 60px;
@@ -322,3 +352,11 @@ label {
     justify-content: center;
     align-items: center;
 }
+
+#styleForTextArea {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    border: none;
+}
+
