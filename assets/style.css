@@ -91,14 +91,6 @@ h1 {
     margin-bottom: 30px;   
   }
 
-#progressBar {
-    position: absolute;
-    background: #2ca9c9;
-    height: 15px;
-    width: 0%;
-    top: 45%;
-  }
-
 #progressNum {
     margin: 0;
     padding: 0;
@@ -113,9 +105,14 @@ h1 {
     background-color: darkgray;
     position: absolute;
     top: 45%;
+    left: 30px;
     height: 15px;
-    width: 100%;
+    width: 90%;
     z-index: -1;
+  }
+
+  input.invalid {
+    background-color: #ffdddd;
   }
 
   #progressNum .step {
@@ -131,6 +128,7 @@ h1 {
     color: #2ca9c9;
     position: relative;
     z-index: 1;
+    line-height: 25px;
   }
 
   #progressNum .step.active {
@@ -149,10 +147,140 @@ h1 {
 
 .sectionCard{
     background-color: lightgray;
-    padding: 10px;
+    padding: 20px;
     border-radius: 8px;
     color: #2ca9c9;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    display: none;
+}
+
+#aboutYou {
+    font-weight: normal;
+    display: flex;
+    font-size: 40px;
+}
+
+.bodyForm {
+    font-size: 32px;
+    font-weight: normal;
+    padding: 50px;
+}
+
+#firstName {
+    border-radius: 8px;
+    width: 300px;
+    height: 60px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+}
+
+#lastName {
+    border-radius: 8px;
+    width: 300px;
+    height: 60px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+}
+
+#emailAddress {
+    width: 100%;
+    height: 60px;
+    border-radius: 8px;
+    border: none;
+}
+
+#mobileNumber {
+    width: 100%;
+    height: 60px;
+    border-radius: 8px;
+    border: none;
+}
+
+.firstAndLastName {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 30px;
+    justify-content: space-between;
+}
+
+.emailAndMobile{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+label {
+    font-weight: normal;
+    font-size: x-large;
+    margin-bottom: 4px;
+    color: #2ca9c9;
+}
+
+.yourDonation{
+    font-size: 32px;
+    font-weight: normal;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 8px;
+}
+
+#inputShortStyle {
+    width: 40%;
+    height: 60px;
+    border-radius: 8px;
+    border: none;
+    background-color: lightgray;
+}
+
+#inputLongStyle {
+    width: 100%;
+    height: 60px;
+    border-radius: 8px;
+    border: none;
+    background-color: lightgray;
+}
+
+.hide {
+    opacity: 0;
+    top: calc(50% + 8em);
+  }
+
+#nextButton {
+    background-color: #2ca9c9;
+    border: none;
+    border-radius: 8px;
+    width: 250px;
+    height: 80px;
+    color: white;
+    font-size: xx-large;
+    float: right;
+    margin-bottom: 40px;
+}
+
+#nextButton:hover {
+    cursor: pointer;
+    background-color: #51b6cf;
+}
+
+#prevButton {
+    background-color: #2ca9c9;
+    border: none;
+    border-radius: 8px;
+    width: 250px;
+    height: 80px;
+    color: white;
+    font-size: xx-large;
+    background-color: #51b6cf;
+    float: left;
+    margin-bottom: 40px;
+}
+
+#prevButton:hover {
+    cursor: pointer;
 }
 
   footer {
