@@ -2,85 +2,104 @@
     <div>
         <div class="bodyDivStyle">
             <section class="bodyStyle">
-                <h1>In euismod sapien eu maximus tempus</h1>
-                <p>
-                    Vestibulum bibendum posuere dui, in pharetra est hendrerit ac.
-                    Integer posuere metus lacus
-                </p>
+                <?php echo "<h1>$text[0]</h1>" ?>
+                <?php echo "<p>$text[1]</p>" ?>
                 <hr class="bodyHrStyle" />
             </section>
             <form id="regForm">
                 <div id="progress">
                     <ul id="progressNum">
-                        <li class="step">1</li>
-                        <li class="step">2</li>
-                        <li class="step">3</li>
+                        <?php
+                        foreach ($listNumbers as $listNumber) {
+                            echo "<li class='step'>$listNumber</li>";
+                        }
+                        ?>
                     </ul>
                 </div>
                 <div class="sectionCard">
-                    <div id="aboutYou">About You</div>
+                    <?php
+                    echo ("<div id='aboutYou'>$tittle[0]</div>")
+                    ?>
                     <div class="bodyForm">
                         <div class="firstAndLastName">
-                            <span>
-                                <label for="firstName">First name*</label>
-                                <input type="text" id="firstName" name="firstName" value="">
-                            </span>
-                            <span>
-                                <label for="lastName">Last name*</label>
-                                <input type="text" id="lastName" name="lastName" value="">
-                            </span>
+                            <?php
+                            echo ("<span>
+                                    <label for='firstName'>$formContent[0]*</label>
+                                    <input type='text' id='firstName' name='firstName'>
+                                    </span>
+                                <span>
+                                    <label for='lastName'>$formContent[1]*</label>
+                                    <input type='text' id='lastName' name='lastName'>
+                                </span>"
+                            )
+                            ?>
                         </div>
                         <div class="emailAndMobile">
-                            <span>
-                                <label for="emailAddress">Email Address*</label>
-                                <input type="email" id="emailAddress" name="emailAddress" value="">
-                            </span>
-                            <span>
-                                <label for="mobileNumber">Mobile number*</label>
-                                <input type="number" id="mobileNumber" name="mobileNumber" value="">
-                            </span>
+                            <?php
+                            echo ("<span>
+                                    <label for='emailAddress'>$formContent[2]*</label>
+                                    <input type='email' id='emailAddress' name='emailAddress'>
+                                </span>
+                                <span>
+                                    <label for='mobileNumber'>$formContent[3]*</label>
+                                    <input type='number' id='mobileNumber' name='mobileNumber'>
+                                </span>"
+                            )
+                            ?>
                         </div>
                     </div>
                 </div>
                 <div class="sectionCard">
-                    <div id="YourDonationHeader">Your donation</div>
+                    <?php
+                    echo ("<div id='YourDonationHeader'>$tittle[1]</div>")
+                    ?>
                     <div class="yourDonation">
-                        <div class="headerForCard">
-                            <span id="tab1">Paypal</span> <span id="tab2">Credit Card</span>
-                        </div>
-                        <label for="inputShortStyle">Donation Amount*</label>
-                        <input type="number" id="inputShortStyle" name="lastName" value="">
-                        <label for="inputLongStyle">Card Holder Name*</label>
-                        <input type="number" id="inputLongStyle" name="lastName" value="">
-                        <label for="inputLongStyle1">Credit Card No.*</label>
-                        <input type="number" id="inputLongStyle1" name="lastName" value="">
-                        <label for="inputShortStyle1">Credit Card No.*</label>
-                        <input type="number" id="inputShortStyle1" name="lastName" value="">
-                        <label for="inputShortStyle2">Card Security Code*</label>
-                        <input type="number" id="inputShortStyle2" name="lastName" value="">
-                        <label for="inputShortStyle3">Expiry Date*</label>
-                        <input type="number" id="inputShortStyle3" name="lastName" value="">
-
+                        <?php
+                        echo ("<div class='headerForCard'>
+                        <span id='tab1'>$formContent[4]</span> <span id='tab2'>$formContent[5]</span>
+                    </div>")
+                        ?>
+                        <?php
+                        echo ("<label for='inputShortStyle'>$formContent[6]*</label>
+                        <input type='number' id='inputShortStyle' name='lastName'>
+                        <label for='inputLongStyle'>$formContent[7]*</label>
+                        <input type='number' id='inputLongStyle' name='lastName'>
+                        <label for='inputShortStyle1'>$formContent[8]*</label>
+                        <input type='number' id='inputShortStyle1' name='lastName'>
+                        <label for='inputShortStyle2'>$formContent[9]*</label>
+                        <input type='number' id='inputShortStyle2' name='lastName'>
+                        <label for='inputShortStyle3'>$formContent[10]*</label>
+                        <input type='number' id='inputShortStyle3' name='lastName'>"
+                        )
+                        ?>
                     </div>
                 </div>
                 <div class="sectionCard">
-                    <div id="yourMessage">Your Message</div>
+                    <?php
+                    echo ("<div id='yourMessage'>$tittle[2]</div>")
+                    ?>
                     <div class="bodyForm">
                         <div class="emailAndMobile">
-                            <span>
-                                <label for="styleForTextArea">Your Message</label>
-                                <textarea rows="4" cols="50" id="styleForTextArea" name="textarea"> </textarea>
-                            </span>
-                            <span>
-                                <input type="checkbox" id="anonymous" name="anonymous">
-                                <label for="anonymous"> Keep me anonymous</label><br>
-                            </span>
+                            <?php
+                            echo ("<span>
+                                <label for='styleForTextArea'>$formContent[11]</label>
+                                <textarea rows='4' cols='50' id='styleForTextArea' name='textarea'> </textarea>
+                                </span>
+                                <span>
+                                <input type='checkbox' id='anonymous' name='anonymous'>
+                                <label for='anonymous'>
+                                $formContent[12]</label><br>
+                                </span>"
+                            )
+                            ?>
                         </div>
                     </div>
                 </div>
                 <div class="buttonStyle">
-                    <button id="prevButton" type="button" onclick="nextPrev(-1)"> Back </button>
-                    <button id="nextButton" type="button" onclick="nextPrev(1)"> Next </button>
+                    <?php
+                    echo ("<button id='prevButton' type='button' onclick='nextPrev(-1)'> $formContent[13] </button>
+                    <button id='nextButton' type='button' onclick='nextPrev(1)'> $formContent[14] </button>")
+                    ?>
                 </div>
             </form>
         </div>

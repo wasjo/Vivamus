@@ -1,30 +1,44 @@
 <?php
-  $logo = "./assets/images/VIVA_LOGO.png";
-  $searchIcon = "./assets/img/search-icon-png-21.svg";
-  $navBarContent = array('Bibendum', 'Sollicitudin', 'Metus', 'Egestas');
-  $footers = array(
-    array('Rutrum', 'Fermentum', 'Neque', 'Consequat'),
-    array('Malesuada', 'Tellus', 'Condimentum', 'Consectetur'),
-    array('Pellentesque', 'Habitant', 'Morbi', 'Tristique'),
-    array('Quisque', 'Pharetra', 'Volutpat', 'Tristique'),
-    array('Phasellus', 'Augue', 'Sapien')
-  );
-  $title = array('How do you feel about recycling?', 
-    'Should the goverment start to enforce garbage separation and recycling schemes accross your area?',
-    'Phasellus augue sapien',
-    'Phasellus augue sapien, aliquam sit amet mauris',
-    'Sed Facilisis volutpat turpis eu viverre',
-    'Vestibulum sit amet tempor orc',
-    'Integer consectetur orci ligula',
-    'Read more >>'
-  );
-  $formTitle = array(
-    'Postcode:',
-    'E-mail Address:',
-    'Mobile Number:',
-    'Submit',
-    'Yes',
-    'No'
-  );
-  
-?>
+$logo = "./assets/images/VIVA_LOGO.png";
+$magnifyingGlass = "./assets/images/MAGNIFYING.png";
+$navBarContents = array('Bibendum', 'Sollicitudin', 'Metus', 'Egestas');
+$text = array(
+    'In euismod sapien eu maximus tempus',
+    'Vestibulum bibendum posuere dui, in pharetra est hendrerit ac. Integer posuere metus lacus',
+);
+$listNumbers = array(1, 2, 3);
+//   $formTitle = array(
+//     'Postcode:',
+//     'E-mail Address:',
+//     'Mobile Number:',
+//     'Submit',
+//     'Yes',
+//     'No'
+//   );
+
+$form = [
+    $tittle = array('About You', 'Your donation', 'Your Message'),
+    $formContent = array(
+        'First name', 
+        'Last name', 
+        'Email Address', 
+        'Mobile number',
+        'Paypal',
+        'Credit Card',
+        'Donation Amount',
+        'Card Holder Name',
+        'Credit Card No.',
+        'Card Security Code',
+        'Expiry Date',
+        'Your Message',
+        'Keep me anonymous',
+        'Back',
+        'Next',
+    )
+];
+
+$footers = array(
+    $icons = array('facebook', 'twitter', 'insta', 'tiktok', 'viber'),
+    $links = array('Pellentesqu', 'Et interdum', 'Neque', 'Integer', 'Ullamcorper', 'Sagittis'),
+    $rights = array('Copyright © 2015 Proin eget ipsum libero', 'All Rights Reserved.'),
+);

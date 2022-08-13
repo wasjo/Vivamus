@@ -1,26 +1,23 @@
 <footer>
     <div class="mediaLinkStyle">
-        <span class="mediaIcon">facebook</span>
-        <span class="mediaIcon">facebook</span>
-        <span class="mediaIcon">facebook</span>
-        <span class="mediaIcon">facebook</span>
-        <span class="mediaIcon">facebook</span>
+        <?php
+        foreach ($icons as $icon) {
+            echo "<span class='mediaIcon'>$icon</span>";
+        }
+        ?>
     </div>
     <div class="sponsorStyle">
-        <span>Pellentesqu</span>
-        <hr class="hrStyle" />
-        <span>Et interdum</span>
-        <hr class="hrStyle" />
-        <span>Neque</span>
-        <hr class="hrStyle" />
-        <span>Integer</span>
-        <hr class="hrStyle" />
-        <span>Ullamcorper</span>
-        <hr class="hrStyle" />
-        <span>Sagittis</span>
+        <?php
+        foreach ($links as $link) {
+            echo "<span> $link </span> <hr class='hrStyle' />";
+        }
+        ?>
     </div>
     <div class="copyrightStyle">
-        <span>Copyright © 2015 Proin eget ipsum libero</span>
-        <span>All Rights Reserved.</span>
+        <?php
+            foreach ($rights as $right) {
+                echo "<span>$right</span>";
+            }
+        ?>
     </div>
 </footer>s
