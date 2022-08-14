@@ -1,4 +1,5 @@
 <?php
+include './database/mysqlConnection.php';
 include './element/content.php';
 include './element/header.php';
 include './element/navBar.php';

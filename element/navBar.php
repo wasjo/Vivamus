@@ -1,9 +1,14 @@
 <header>
+    <?php
+    $navbar="SELECT `content` FROM `contents` WHERE `element_id` = 1";
+    $result = $con->query($navbar);
+
+    ?>
     <?= "<img src='$logo' alt='logo' class='logo' >" ?>
     <div class="navBarHeader">
         <?php
-        foreach ($navBarContents as $content) {
-            echo "<span >$content</span> <hr class='hrStyle'/>";
+         foreach($result as $item) {
+            echo "<span>$item[content]</span> <hr class='hrStyle'/>";
         }
         ?>
     </div>

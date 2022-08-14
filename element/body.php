@@ -1,24 +1,54 @@
 <body>
     <div>
+        <?php
+        //header Tittle
+        $headerTittle = "SELECT `content` FROM `contents` WHERE `element_id` = 2";
+        $Result = $con->query($headerTittle);
+        $row = mysqli_fetch_all($Result);
+        $header = $row[0];
+        $subHeader = $row[1];
+
+        //tab numbers
+        $tabList = "SELECT `content` FROM `contents` WHERE `element_id` = 3";
+        $tabListResult = $con->query($tabList);
+
+        //form tittle
+        $form = "SELECT `content` FROM `contents` WHERE `element_id` = 4";
+        $formResult = $con->query($form);
+        $formRow = mysqli_fetch_all($formResult);
+        $aboutYou = $formRow[0];
+        $donation = $formRow[1];
+        $message = $formRow[2];
+
+        //form content
+        $formContents = "SELECT `content` FROM `contents` WHERE `element_id` = 5";
+        $formContentResult = $con->query($formContents);
+        while ($formContentResultRow = mysqli_fetch_array($formContentResult))
+
+        // foreach ($formContentResult as $testtest) {$test = $testtest;}
+        echo ($test[''])
+
+        ?>
+
         <div class="bodyDivStyle">
             <section class="bodyStyle">
-                <?php echo "<h1>$text[0]</h1>" ?>
-                <?php echo "<p>$text[1]</p>" ?>
+                <?php echo "<h1>$header[0]</h1>" ?>
+                <?php echo "<p>$subHeader[0]</p>" ?>
                 <hr class="bodyHrStyle" />
             </section>
             <form id="regForm">
                 <div id="progress">
                     <ul id="progressNum">
                         <?php
-                        foreach ($listNumbers as $listNumber) {
-                            echo "<li class='step'>$listNumber</li>";
+                        foreach ($tabListResult as $list) {
+                            echo "<li class='step'>$list[content]</li>";
                         }
                         ?>
                     </ul>
                 </div>
                 <div class="sectionCard">
                     <?php
-                    echo ("<div id='aboutYou'>$tittle[0]</div>")
+                    echo ("<div id='aboutYou'>$aboutYou[0]</div>")
                     ?>
                     <div class="bodyForm">
                         <div class="firstAndLastName">
@@ -51,7 +81,7 @@
                 </div>
                 <div class="sectionCard">
                     <?php
-                    echo ("<div id='YourDonationHeader'>$tittle[1]</div>")
+                    echo ("<div id='YourDonationHeader'>$donation[0]</div>")
                     ?>
                     <div class="yourDonation">
                         <?php
@@ -76,7 +106,7 @@
                 </div>
                 <div class="sectionCard">
                     <?php
-                    echo ("<div id='yourMessage'>$tittle[2]</div>")
+                    echo ("<div id='yourMessage'>$message[0]</div>")
                     ?>
                     <div class="bodyForm">
                         <div class="emailAndMobile">
