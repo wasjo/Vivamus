@@ -7,14 +7,6 @@ $text = array(
     'Vestibulum bibendum posuere dui, in pharetra est hendrerit ac. Integer posuere metus lacus',
 );
 $listNumbers = array(1, 2, 3);
-//   $formTitle = array(
-//     'Postcode:',
-//     'E-mail Address:',
-//     'Mobile Number:',
-//     'Submit',
-//     'Yes',
-//     'No'
-//   );
 
 $form = [
     $tittle = array('About You', 'Your donation', 'Your Message'),
