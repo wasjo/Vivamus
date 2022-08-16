@@ -2,8 +2,8 @@
     <?php
     $navbar="SELECT `content` FROM `contents` WHERE `element_id` = 1";
     $result = $con->query($navbar);
-
     ?>
+    
     <?= "<img src='$logo' alt='logo' class='logo' >" ?>
     <div class="navBarHeader">
         <?php

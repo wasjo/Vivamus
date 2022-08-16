@@ -23,10 +23,24 @@
         //form content
         $formContents = "SELECT `content` FROM `contents` WHERE `element_id` = 5";
         $formContentResult = $con->query($formContents);
-        while ($formContentResultRow = mysqli_fetch_array($formContentResult))
 
-        // foreach ($formContentResult as $testtest) {$test = $testtest;}
-        echo ($test[''])
+        // while ($formContentResultRow = mysqli_fetch_array($formContentResult))
+        $formContentRow = mysqli_fetch_all($formContentResult);
+        $firstName = $formContentRow[0];
+        $lastName = $formContentRow[1];
+        $emailAddress = $formContentRow[2];
+        $mobileNumber = $formContentRow[3];
+        $paypal = $formContentRow[4];
+        $creditCard = $formContentRow[5];
+        $donationAmount = $formContentRow[6];
+        $cardHolderName = $formContentRow[7];
+        $creditCardNo = $formContentRow[8];
+        $cardSecurityCode = $formContentRow[9];
+        $expiryDate = $formContentRow[10];
+        $yourMessage = $formContentRow[11];
+        $keepMenonymous = $formContentRow[12];
+        $back = $formContentRow[13];
+        $next = $formContentRow[14];
 
         ?>
 
@@ -54,11 +68,11 @@
                         <div class="firstAndLastName">
                             <?php
                             echo ("<span>
-                                    <label for='firstName'>$formContent[0]*</label>
+                                    <label for='firstName'>$firstName[0]*</label>
                                     <input type='text' id='firstName' name='firstName'>
                                     </span>
                                 <span>
-                                    <label for='lastName'>$formContent[1]*</label>
+                                    <label for='lastName'>$lastName[0]*</label>
                                     <input type='text' id='lastName' name='lastName'>
                                 </span>"
                             )
@@ -67,11 +81,11 @@
                         <div class="emailAndMobile">
                             <?php
                             echo ("<span>
-                                    <label for='emailAddress'>$formContent[2]*</label>
+                                    <label for='emailAddress'>$emailAddress[0]*</label>
                                     <input type='email' id='emailAddress' name='emailAddress'>
                                 </span>
                                 <span>
-                                    <label for='mobileNumber'>$formContent[3]*</label>
+                                    <label for='mobileNumber'>$mobileNumber[0]*</label>
                                     <input type='number' id='mobileNumber' name='mobileNumber'>
                                 </span>"
                             )
@@ -86,19 +100,19 @@
                     <div class="yourDonation">
                         <?php
                         echo ("<div class='headerForCard'>
-                        <span id='tab1'>$formContent[4]</span> <span id='tab2'>$formContent[5]</span>
+                        <span id='tab1'>$paypal[0]</span> <span id='tab2'>$creditCard[0]</span>
                     </div>")
                         ?>
                         <?php
-                        echo ("<label for='inputShortStyle'>$formContent[6]*</label>
+                        echo ("<label for='inputShortStyle'>$donationAmount[0]*</label>
                         <input type='number' id='inputShortStyle' name='lastName'>
-                        <label for='inputLongStyle'>$formContent[7]*</label>
+                        <label for='inputLongStyle'>$cardHolderName[0]*</label>
                         <input type='number' id='inputLongStyle' name='lastName'>
-                        <label for='inputShortStyle1'>$formContent[8]*</label>
+                        <label for='inputShortStyle1'> $creditCardNo[0]*</label>
                         <input type='number' id='inputShortStyle1' name='lastName'>
-                        <label for='inputShortStyle2'>$formContent[9]*</label>
+                        <label for='inputShortStyle2'>$cardSecurityCode[0]*</label>
                         <input type='number' id='inputShortStyle2' name='lastName'>
-                        <label for='inputShortStyle3'>$formContent[10]*</label>
+                        <label for='inputShortStyle3'>$expiryDate[0]*</label>
                         <input type='number' id='inputShortStyle3' name='lastName'>"
                         )
                         ?>
@@ -112,13 +126,13 @@
                         <div class="emailAndMobile">
                             <?php
                             echo ("<span>
-                                <label for='styleForTextArea'>$formContent[11]</label>
+                                <label for='styleForTextArea'>$yourMessage[0]</label>
                                 <textarea rows='4' cols='50' id='styleForTextArea' name='textarea'> </textarea>
                                 </span>
                                 <span>
                                 <input type='checkbox' id='anonymous' name='anonymous'>
                                 <label for='anonymous'>
-                                $formContent[12]</label><br>
+                                $keepMenonymous[0]</label><br>
                                 </span>"
                             )
                             ?>
@@ -127,8 +141,8 @@
                 </div>
                 <div class="buttonStyle">
                     <?php
-                    echo ("<button id='prevButton' type='button' onclick='nextPrev(-1)'> $formContent[13] </button>
-                    <button id='nextButton' type='button' onclick='nextPrev(1)'> $formContent[14] </button>")
+                    echo ("<button id='prevButton' type='button' onclick='nextPrev(-1)'>  $back[0] </button>
+                    <button id='nextButton' type='button' onclick='nextPrev(1)'> $next[0] </button>")
                     ?>
                 </div>
             </form>
